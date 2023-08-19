@@ -1,0 +1,19 @@
+﻿@page
+@model AutoPlacApp.Pages.NotFoundModel
+@{
+	ViewData["Title"] = "Nije pronađeno";
+}
+
+<div class="container d-flex justify-content-center align-items-end" style="height: 30vh !important">
+	<div class="">
+		<h1 class="">Resurs koji tražite nije moguće pronaći</h1>
+	</div>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center mt-4">
+	<div class="">	
+		<a asp-page="/Auta/Index" class="btn btn-primary mx-auto">
+			Kliknite ovde da biste se vratili na početnu stranicu
+		</a>
+	</div>
+</div>

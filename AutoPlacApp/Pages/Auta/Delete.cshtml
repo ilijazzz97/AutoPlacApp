@@ -1,0 +1,18 @@
+﻿@page "{id}"
+@model AutoPlacApp.Pages.Auta.DeleteModel
+@{
+    ViewData["Title"] = "Izbriši";
+}
+
+<div class="container pt-5 mt-5 text-center">
+    <h1>Izbriši</h1>
+    <div class="alert alert-danger" style="width:60%; margin: 2rem 20% 0 20%;">
+        <h5>Da li ste sigurni da želite da izbrišete auto - @Model.Auto.Marka @Model.Auto.Model sa id: @Model.Auto.Id ?</h5>
+        <form method="post">
+            <button type="submit" class="btn btn-danger" style="width: 10rem;">Da</button>
+            <a asp-page="/Auta/Details" class="btn btn-primary" style="width: 10rem;" asp-route-ID="@Model.Auto.Id">
+                <span>Ne</span>
+            </a>
+        </form>
+    </div>
+</div>

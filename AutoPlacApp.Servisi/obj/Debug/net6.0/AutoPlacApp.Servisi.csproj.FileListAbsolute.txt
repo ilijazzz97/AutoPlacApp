@@ -1,0 +1,17 @@
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\bin\Debug\net6.0\AutoPlacApp.Servisi.deps.json
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\bin\Debug\net6.0\AutoPlacApp.Servisi.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\bin\Debug\net6.0\AutoPlacApp.Servisi.pdb
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\bin\Debug\net6.0\AutoPlacApp.Modeli.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\bin\Debug\net6.0\AutoPlacApp.Modeli.pdb
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.csproj.AssemblyReference.cache
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.AssemblyInfoInputs.cache
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.AssemblyInfo.cs
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.csproj.CoreCompileInputs.cache
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.csproj.CopyComplete
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\refint\AutoPlacApp.Servisi.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.pdb
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\ref\AutoPlacApp.Servisi.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\bin\Debug\net6.0\AutoPlacApp.Servisi.runtimeconfig.json
+C:\Projects\AutoPlacApp\AutoPlacApp.Servisi\obj\Debug\net6.0\AutoPlacApp.Servisi.genruntimeconfig.cache

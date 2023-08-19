@@ -1,0 +1,12 @@
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\bin\Debug\net6.0\AutoPlacApp.Modeli.deps.json
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\bin\Debug\net6.0\AutoPlacApp.Modeli.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\bin\Debug\net6.0\AutoPlacApp.Modeli.pdb
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\AutoPlacApp.Modeli.csproj.AssemblyReference.cache
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\AutoPlacApp.Modeli.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\AutoPlacApp.Modeli.AssemblyInfoInputs.cache
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\AutoPlacApp.Modeli.AssemblyInfo.cs
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\AutoPlacApp.Modeli.csproj.CoreCompileInputs.cache
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\AutoPlacApp.Modeli.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\refint\AutoPlacApp.Modeli.dll
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\AutoPlacApp.Modeli.pdb
+C:\Projects\AutoPlacApp\AutoPlacApp.Modeli\obj\Debug\net6.0\ref\AutoPlacApp.Modeli.dll

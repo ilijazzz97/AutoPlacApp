@@ -1,0 +1,244 @@
+﻿@page "/automobili/izmeni/{id:min(1)?}"
+@using System.ComponentModel.DataAnnotations
+@using static AutoPlacApp.Servisi.MetodeAutoSkladiste
+@model AutoPlacApp.Pages.Auta.EditModel
+@{
+    ViewData["Title"] = "Izmeni";
+    var pageHeader = Model.Auto.Id > 0 ? "Izmeni podatke" : "Dodaj automobil";
+    var pageRedirect = Model.Auto.Id > 0 ? "/Auta/Details" : "/Auta/Index";
+}
+
+<style>
+    .btn-i:hover {
+    background: var(--primarna3);
+    transform: translateY(-2px);
+    color:white;
+    }
+    .btn-p:hover {
+    background: rgb(255, 69, 69);
+    transform: translateY(-2px);
+    color:white;
+    }
+    .mbb {
+        margin-bottom: 10rem;
+    }
+    .mbt {
+        margin-top: 6rem;
+    }
+    .custom-file-button input[type=file]::-webkit-file-upload-button {
+      display: none;
+    }
+
+    .custom-file-button input[type=file]::file-selector-button {
+      display: none;
+    }
+
+    .custom-file-button:hover label {
+      background-color: #dde0e3;
+      cursor: pointer;
+    }
+    .lb:hover{
+        background-color:white !important;
+    }
+
+    .pageHeader {
+        display: flex;
+        padding-left: 1rem;
+        padding-top: 2.5rem;
+        margin-bottom: 4rem;
+        width: 30rem;
+        height: 5rem;
+        color: #393E46;
+        border-bottom: 2px solid #EEEEEE;
+    }
+}
+</style>
+
+<div class="container mbb mbt about-box">
+
+    <div class="pageHeader"><h2>@pageHeader</h2></div>
+ 
+    <form method="post" class="mt-3" enctype="multipart/form-data" >
+        <input hidden asp-for="Auto.Id" />
+        <input hidden asp-for="Auto.SlikaDir" />
+
+        @*Marka*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Marka" class="input-group-text input-border-color col-2 form-label-col"></label>        
+            <select asp-for="Auto.Marka" class="form-select input-border-color col-10 text-center form-input-col2">
+                @foreach (Marka value in Enum.GetValues(typeof(Marka)))
+                {
+                    <option value="@value">@EnumHelper.GetEnumDescription(value)</option>
+                }
+            </select>
+        </div>
+        <span asp-validation-for="Auto.Marka" class="text-danger mb-1"></span>
+
+        @*Model*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Model" class="input-group-text input-border-color col-2 form-label-col"></label>
+            <input asp-for="Auto.Model" class="form-control input-border-color col-10 text-center form-input-col2" placeholder="Model" />
+        </div>
+        <span asp-validation-for="Auto.Model" class="text-danger mb-1"></span>
+
+        @*Slika*@
+        <div class="input-group custom-file-button mt-3">
+            <label class="input-group-text input-border-color col-2 form-label-col">Slika</label>
+            <input asp-for="Slika" type="file" name="Slika" id="Slika" class="custom-file-input" style="display:none;" />
+            <label for="Slika" class="custom-file-label lb form-control input-border-color col-10 form-input-col2 text-center">Nije izabrana slika</label>
+        </div>
+    
+        @*Godina proizvodnje*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.GodinaProizvodnje" class="input-group-text input-border-color col-2 form-label-col">Godina proizvodnje</label>
+            <input asp-for="Auto.GodinaProizvodnje" class="form-control input-border-color col-10 text-center form-input-col2" placeholder="Godina proizvodnje" />
+        </div>
+        <span asp-validation-for="Auto.GodinaProizvodnje" class="text-danger mb-1"></span>
+
+        @*Stanje*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Stanje" class="input-group-text input-border-color col-2 form-label-col"></label>
+                <select asp-for="Auto.Stanje" class="form-select input-border-color col-10 text-center form-input-col2">
+                    @foreach (Stanje value in Enum.GetValues(typeof(Stanje)))
+                    {
+                        <option value="@value">@EnumHelper.GetEnumDescription(value)</option>
+                    }
+                </select>
+        </div>
+        <span asp-validation-for="Auto.Stanje" class="text-danger mb-1"></span>
+
+        @*Gorivo*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Gorivo" class="input-group-text input-border-color col-2 form-label-col"></label>
+                <select asp-for="Auto.Gorivo" class="form-select input-border-color col-10 text-center form-input-col2">
+                    @foreach (Gorivo value in Enum.GetValues(typeof(Gorivo)))
+                    {
+                        <option value="@value">@EnumHelper.GetEnumDescription(value)</option>
+                    }
+                </select>
+        </div>
+        <span asp-validation-for="Auto.Gorivo" class="text-danger mb-1"></span>
+
+        @*Boja*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Boja" class="input-group-text input-border-color col-2 form-label-col"></label>
+                <select asp-for="Auto.Boja" class="form-select input-border-color col-10 text-center form-input-col2">
+                    @foreach (var value in Enum.GetValues(typeof(Boja)))
+                    {
+                         <option value="@value">@value</option>
+                    } 
+                </select>
+        </div>
+
+        @*Karoserija*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Karoserija" class="input-group-text input-border-color col-2 form-label-col"></label>
+                <select asp-for="Auto.Karoserija" class="form-select input-border-color col-10 text-center form-input-col2">
+                @foreach (var value in Enum.GetValues(typeof(Karoserija)))
+                {
+                     <option value="@value">@value</option>
+                }                 
+                </select>
+        </div>
+        <span asp-validation-for="Auto.Karoserija" class="text-danger mb-1"></span>
+
+        @*Klima*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Klima" class="input-group-text input-border-color col-2 form-label-col"></label>
+                <select asp-for="Auto.Klima" class="form-select input-border-color col-10 text-center form-input-col2">
+                    @foreach (Klima value in Enum.GetValues(typeof(Klima)))
+                    {
+                        <option value="@value">@EnumHelper.GetEnumDescription(value)</option>
+                    }
+                </select>
+        </div>
+
+        @*Kubikaža*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Kubikaža" class="input-group-text input-border-color col-2 form-label-col"></label>
+                <input asp-for="Auto.Kubikaža" class="form-control input-border-color col-9 text-center form-input-col1" placeholder="Kubikaža" />
+                <span class="col-1 input-group-text justify-content-center form-span-col">cm<sup>3</sup></span>
+        </div>
+        <span asp-validation-for="Auto.Kubikaža" class="text-danger mb-1"></span>
+
+        @*Kilometraža*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Kilometraža" class="input-group-text input-border-color col-2 form-label-col"></label>
+                <input asp-for="Auto.Kilometraža" class="form-control input-border-color col-9 text-center form-input-col1" placeholder="Kilometraža" />
+                <span class="col-1 input-group-text justify-content-center form-span-col">km</span>
+        </div>
+        <span asp-validation-for="Auto.Kilometraža" class="text-danger mb-1"></span>
+
+        @*Snaga motora*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.SnagaMotora" class="input-group-text input-border-color col-2 form-label-col">Snaga motora</label>
+                <input asp-for="Auto.SnagaMotora" class="form-control input-border-color col-9 text-center form-input-col1" placeholder="Snaga motora" />
+                <span class="col-1 input-group-text justify-content-center form-span-col">KS</span>
+        </div>
+        <span asp-validation-for="Auto.SnagaMotora" class="text-danger mb-1"></span>
+
+        @*Strana volana*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.StranaVolana" class="input-group-text input-border-color col-2 form-label-col">Strana volana</label>
+                <select asp-for="Auto.StranaVolana" class="form-select input-border-color col-10 text-center form-input-col2">
+                    @foreach (StranaVolana value in Enum.GetValues(typeof(StranaVolana)))
+                    {
+                        <option value="@value">@EnumHelper.GetEnumDescription(value)</option>
+                    }
+                </select>
+        </div>
+
+        @*Broj vrata*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.BrojVrata" class="input-group-text input-border-color col-2 form-label-col">Broj vrata</label>
+                <select asp-for="Auto.BrojVrata" class="form-select input-border-color col-10 text-center form-input-col2">
+                    @foreach (BrojVrata value in Enum.GetValues(typeof(BrojVrata)))
+                    {
+                        <option value="@value">@EnumHelper.GetEnumDescription(value)</option>
+                    }
+                </select>
+        </div>
+
+        @*Broj sedišta*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.BrojSedista" class="input-group-text input-border-color col-2 form-label-col">Broj sedišta</label>
+                <select asp-for="Auto.BrojSedista" class="form-select input-border-color col-10 text-center form-input-col2">
+                    @foreach (BrojSedista value in Enum.GetValues(typeof(BrojSedista)))
+                    {
+                        <option value="@value">@EnumHelper.GetEnumDescription(value)</option>
+                    }
+                </select>
+        </div>
+
+        @*Cena*@
+        <div class="input-group mt-3">
+            <label asp-for="Auto.Cena" class="input-group-text input-border-color col-2 form-label-col"></label>
+            <input asp-for="Auto.Cena" class="form-control input-border-color col-9 text-center form-input-col1" placeholder="Cena" />
+            <span class="col-1 input-group-text justify-content-center form-span-col">&euro;</span>
+        </div>
+        <span asp-validation-for="Auto.Cena" class="text-danger mb-1"></span>
+
+        @*Dugmad*@
+        <div class="form-group">
+            <div class="d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-details btn-nazad btn-i m-1 btnw-form">
+                    <span>Sačuvaj</span>
+                </button>
+                <a asp-page="@pageRedirect" class="btn btn-details btn-nazad btn-p m-1 btnw-form" asp-route-ID="@Model.Auto.Id">
+                    <span>Poništi</span>
+                </a>
+            </div>
+        </div>
+        @section Scripts {
+            <script>
+                $(document).ready(function() {
+                    $('.custom-file-input').on("change", function () {
+                        var fileName = $(this).val().split("\\").pop();
+                        $(this).next('.custom-file-label').html(fileName);
+                    });
+                });
+            </script>
+        }
+    </form>
+
+</div>

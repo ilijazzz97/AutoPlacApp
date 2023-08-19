@@ -1,0 +1,29 @@
+﻿@page "/automobili"
+@using static AutoPlacApp.Servisi.MetodeAutoSkladiste
+@model AutoPlacApp.Pages.Auta.IndexModel
+@{
+    ViewData["Title"] = "Automobili";
+}
+
+<div class="container card-deck pt-5 mt-5 pb-5 mb-5">
+	@foreach(var auto in Model.Automobili){
+		var slikaDir = "~/images/cars/" + (auto.SlikaDir ?? "noimage.jpg");
+	<div class="card m-3 c-width">
+		<div class="card-flow"><a asp-page="/Auta/Details" asp-route-ID="@auto.Id"><img class="card-img-top slikaThumbnail" id="slikaThumbnail" loading="lazy" src="@slikaDir" asp-append-version="true" /></a></div>
+		<div class="card-details">
+			<p class="text-title text-center mt-1">@EnumHelper.GetEnumDescription(@auto.Marka) @auto.Model</p>
+			<div class="row mb-2 pt-3">
+				<p class="col-7 ps-4">@EnumHelper.GetEnumDescription(@auto.Gorivo) | @auto.GodinaProizvodnje</p>
+				<p class="col-5 h5 text-end pe-4" style="color: green;">@auto.Cena &euro;</p>
+			</div>
+		</div>
+		<a asp-page="/Auta/Details" asp-route-ID="@auto.Id"><button class="card-button">Detalji</button></a>
+	</div>
+	}
+    <div class="add-dugme m-3 c-width justify-content-center align-items-center d-inline-flex">
+		<a class="btn-details-add" asp-page="/Auta/Edit" style="text-decoration:none">			
+			<span class="button__text">Dodaj auto</span>
+			<span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>			
+		</a>
+    </div>
+</div>

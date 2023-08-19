@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QP8bUJDaeUMYRoTcKfOSi7qLmLkZXCKtoi/RcGXmPfpWgZ+xhxLpBs9zpC53e3wfN+nYAIU7Ob9jslTWtkaIPA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\AutoPlacApp\\AutoPlacApp.Modeli\\AutoPlacApp.Modeli.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pesic\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\pesic\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\pesic\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,49 @@
+﻿<header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-dark border-bottom box-shadow" style="background-color:var(--primarna1) !important">
+        <div class="container">
+            <a class="navbar-brand navbar-header visible" id="brand" asp-area="" asp-page="/Index">AutoPlac</a> 
+            <button class="navbar-toggler" type="button" onclick="showhide('search')" aria-controls="s"
+                    aria-expanded="false" aria-label="Toggle search" id="srch">
+                <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <button class="navbar-toggler" type="button" onclick="showhide('menu')" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle menu" id="menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapser-search collapse d-md-inline-flex" data-parent="#srch" id="s">
+                <ul class="navbar-nav ul-fs mob-srch">
+                    <li class="nav-item">
+                        <form class="form" method="get">
+                            <button type="submit">
+                                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <input class="input"  placeholder="Pretraga" type="text" oninvalid="this.setCustomValidity('Polje ne sme biti prazno')" oninput="this.setCustomValidity('')">
+                            <button class="reset" type="reset">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>            
+            <div class="navbar-collapse collapse d-md-inline-flex" id="m">
+                <ul class="navbar-nav ul-fs gap-lg-4 generic-list-item generic-list-item-hover-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Index">O nama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Auta/Index">Automobili</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Auta/Edit">Dodaj</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
