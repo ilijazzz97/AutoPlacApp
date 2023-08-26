@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N4PQrGJyTmAvRs58RvblBV+9XR3OVB/D++q3lGc76ik=",
+  "Hash": "l9N5441Pj0l+cwSDoa2qXjVGAkPZt2IWPjQOpCvowz0=",
   "Source": "AutoPlacApp",
   "BasePath": "_content/AutoPlacApp",
   "Mode": "Default",
@@ -287,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\cars\\4da02ba0-e6b5-4d6c-a23a-951a05c120a4_bmw520.jpg"
+    },
+    {
+      "Identity": "C:\\Projects\\AutoPlacApp\\AutoPlacApp\\wwwroot\\images\\cars\\98d74a98-cb5e-4b14-91fe-94564719541d_ford.jpg",
+      "SourceId": "AutoPlacApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\AutoPlacApp\\AutoPlacApp\\wwwroot\\",
+      "BasePath": "_content/AutoPlacApp",
+      "RelativePath": "images/cars/98d74a98-cb5e-4b14-91fe-94564719541d_ford.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cars\\98d74a98-cb5e-4b14-91fe-94564719541d_ford.jpg"
     },
     {
       "Identity": "C:\\Projects\\AutoPlacApp\\AutoPlacApp\\wwwroot\\images\\cars\\a15627b0-d87f-4701-95de-bde7a521077f_bentleycontinental.jpg",

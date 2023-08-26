@@ -8,52 +8,6 @@
     var pageRedirect = Model.Auto.Id > 0 ? "/Auta/Details" : "/Auta/Index";
 }
 
-<style>
-    .btn-i:hover {
-    background: var(--primarna3);
-    transform: translateY(-2px);
-    color:white;
-    }
-    .btn-p:hover {
-    background: rgb(255, 69, 69);
-    transform: translateY(-2px);
-    color:white;
-    }
-    .mbb {
-        margin-bottom: 10rem;
-    }
-    .mbt {
-        margin-top: 6rem;
-    }
-    .custom-file-button input[type=file]::-webkit-file-upload-button {
-      display: none;
-    }
-
-    .custom-file-button input[type=file]::file-selector-button {
-      display: none;
-    }
-
-    .custom-file-button:hover label {
-      background-color: #dde0e3;
-      cursor: pointer;
-    }
-    .lb:hover{
-        background-color:white !important;
-    }
-
-    .pageHeader {
-        display: flex;
-        padding-left: 1rem;
-        padding-top: 2.5rem;
-        margin-bottom: 4rem;
-        width: 30rem;
-        height: 5rem;
-        color: #393E46;
-        border-bottom: 2px solid #EEEEEE;
-    }
-}
-</style>
-
 <div class="container mbb mbt about-box">
 
     <div class="pageHeader"><h2>@pageHeader</h2></div>
@@ -240,5 +194,4 @@
             </script>
         }
     </form>
-
 </div>
